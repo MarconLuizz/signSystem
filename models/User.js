@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+// Definição do schema (estrutura) para o modelo de Usuário
 const UserSchema = new Schema(
   {
     nome: {
@@ -27,6 +28,8 @@ const UserSchema = new Schema(
   { timestamps: true }
 );
 
+// Criação do modelo 'User' com base no schema definido
 const User = mongoose.model("User", UserSchema);
 
+// Exporta o modelo para ser utilizado em outras partes da aplicação (como nas rotas)
 module.exports = User;
